@@ -42,8 +42,8 @@ public class AffectedCountries extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_affected_countries);
 
-        editSearch = findViewById(R.id.editSearch);
-        listView = findViewById(R.id.listView);
+        editSearch = findViewById(R.id.editSearch);  // Search bar
+        listView = findViewById(R.id.listView);   // List of Countries
         spinner= findViewById(R.id.progressBar);
 
         getSupportActionBar().setTitle("Affected Countries");

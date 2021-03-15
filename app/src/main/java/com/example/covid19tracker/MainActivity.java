@@ -21,9 +21,6 @@ import org.eazegraph.lib.models.PieModel;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-//import com.google.android.material.floatingactionbutton.FloatingActionButton;
-//import com.google.android.material.snackbar.Snackbar;
-//import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,11 +36,6 @@ public class MainActivity extends AppCompatActivity {
         spinner= findViewById(R.id.progressBar);
         spinner.setVisibility(View.GONE);
 
-        //Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-        //FloatingActionButton fab = findViewById(R.id.fab);
-        //fab.setOnClickListener(view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-          //      .setAction("Action", null).show());
 
         tvCases = findViewById(R.id.tvCases);
         tvAffectedCountries = findViewById(R.id.tvAffectedCountries);
@@ -58,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         fetchData();
     }
 
+    // Getting the Global Covid19 data from the api
     private void fetchData() {
         String url = "https://corona.lmao.ninja/v2/all";
         spinner.setVisibility(View.VISIBLE);
@@ -96,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
     }
-
+    // On Clicking the Countries button it should open the Affected Countries activity
     public void goTrackCountries(View view) {
         startActivity(new Intent(getApplicationContext(),AffectedCountries.class));
     }
