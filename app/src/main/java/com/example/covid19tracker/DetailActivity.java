@@ -12,6 +12,8 @@ public class DetailActivity extends AppCompatActivity {
 
     private int positionCountry;
     TextView tvCountry, tvCases,  tvTodayCases, tvTotalDeaths, tvTodayDeaths, tvRecovered, tvActive;
+
+    // This will display the details of each Country
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
